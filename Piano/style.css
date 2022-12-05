@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: white;
+}
+
+video{
+    position: fixed;
+    width: 100%;
+    z-index: -11;
+}
+
+.wrapper{
+    width: 780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    background-image: url(./piano-background.jpg);
+    
+
+}
+
+.wrapper header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2{
+    color: rgb(74, 21, 21);
+    font-size: 1.6rem;
+
+}
+
+header .column {
+    display: flex;
+    align-items: center;
+}
+
+header .column span {
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem;
+}
+
+.volume-slider input {
+    accent-color: rgb(69, 24, 24);
+}
+
+.volume-slider span{
+    color: rgb(69, 24, 24);
+}
+.piano-keys{
+    display: flex;
+    margin-top: 40px;
+}
+
+.piano-keys .key {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    color: #a2a2a2;
+    text-transform: uppercase;
+}
+
+.piano-keys .black{
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(#333 96%, #000 4%);
+
+}
+
+.piano-keys .black.active{
+    box-shadow: inset -5px 5px 20px rgba(255 , 255, 255, 0.2);
+    background: linear-gradient(to bottom , #000 0%, #434344  100%);
+}
+
+.piano-keys .white{
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background: linear-gradient(#fff 96%, #eee 4%);
+}   
+
+.piano-keys .white.active{
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom , #fff 0%, #eee  100%);
+}
+
+.piano-keys span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 1.24rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 412px ) {
+   
+    body{
+        overflow: hidden;
+    }
+   
+
+    .wrapper{
+        transform: rotate(90deg);
+        width: 1000px;
+    }
+} 
+
+ @media only screen and (max-width: 414px ){
+        .wrapper{
+            transform: rotate(90deg);
+            width: 1000px;
+        }
+
+    }
+
+    @media only screen and (max-width: 414px ){
+        .wrapper{
+            transform: rotate(90deg);
+            width: 600px;
+        }
+    }
+
+    @media only screen and (max-width: 783px ) {
+        .wrapper{
+            width: 600px;
+        }
+    }
+
+    @media only screen and (max-width: 600px ) {
+        .wrapper{
+            width: 550px;
+        }
+    }
